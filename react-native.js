@@ -75,12 +75,6 @@ module.exports = {
 		"react-native/split-platform-components": "off", // 필요에 따라 켤 수 있음
 		"react-native/no-inline-styles": "off", // 스타일 객체 사용을 허용
 		"react-native/no-color-literals": "off", // 색상 리터럴 사용 허용
-		"react-native/no-raw-text": [
-			"error",
-			{
-				skip: ["CustomText"], // 커스텀 텍스트 컴포넌트 허용
-			},
-		],
 
 		// React Native 환경에 맞는 규칙 조정
 		"no-console": "off", // React Native에서는 console 사용이 일반적
