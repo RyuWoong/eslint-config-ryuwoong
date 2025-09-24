@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-ryuwoong",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Personalized ESLint configuration presets for JavaScript, TypeScript, React, and React Native projects",
 	"license": "ISC",
 	"author": {
