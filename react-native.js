@@ -71,10 +71,12 @@ module.exports = {
 	},
 	rules: {
 		// React Native 전용 규칙들
-		"react-native/no-unused-styles": "error",
-		"react-native/split-platform-components": "off", // 필요에 따라 켤 수 있음
-		"react-native/no-inline-styles": "off", // 스타일 객체 사용을 허용
+		"react-native/no-unused-styles": "off", // React 컴포넌트에서 사용되지 않는 스타일시트 규칙을 감지
+		"react-native/split-platform-components": "off", // 필요한 경우 플랫폼별 파일 이름을 사용하도록 강제
+		"react-native/sort-styles": "off", // 스타일 정의는 알파벳순으로 정렬.
+		"react-native/no-inline-styles": "off", // 인라인 스타일 객체 사용을 비허용 off
 		"react-native/no-color-literals": "off", // 색상 리터럴 사용 허용
+		"react-native/no-raw-text": "off", // 텍스트 컴포넌트 외부에서 원시 텍스트 감지
 
 		// React Native 환경에 맞는 규칙 조정
 		"no-console": "off", // React Native에서는 console 사용이 일반적
