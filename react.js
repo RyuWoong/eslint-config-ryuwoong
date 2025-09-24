@@ -15,8 +15,6 @@ module.exports = {
 		// React 관련 규칙들
 		"react/react-in-jsx-scope": "off", // React 17+에서는 필요 없음
 		"react/prop-types": "warn",
-		"react/jsx-uses-react": "off", // React 17+에서는 필요 없음
-		"react/jsx-uses-vars": "error",
 
 		// JSX 품질 규칙들 (Prettier가 스타일은 관리)
 		"react/jsx-key": ["error", { checkFragmentShorthand: true }],
