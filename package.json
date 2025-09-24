@@ -1,0 +1,42 @@
+{
+	"name": "eslint-config-ryuwoong",
+	"version": "1.0.0",
+	"description": "Personalized ESLint configuration presets for JavaScript, TypeScript, React, and React Native projects",
+	"license": "ISC",
+	"author": {
+		"name": "RyuWoong",
+		"email": "ryuwoong.dev@gmail.com"
+	},
+	"type": "commonjs",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RyuWoong/eslint-config-ryuwoong.git"
+	},
+	"homepage": "https://github.com/RyuWoong/eslint-config-ryuwoong#readme",
+	"bugs": {
+		"url": "https://github.com/RyuWoong/eslint-config-ryuwoong/issues"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"files": [
+		"index.js",
+		"react.js",
+		"typescript.js",
+		"react-native.js",
+		"README.md"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"prepublishOnly": "npm run lint",
+		"release": "npm version patch && npm publish",
+		"release:minor": "npm version minor && npm publish",
+		"release:major": "npm version major && npm publish"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
