@@ -1,7 +1,7 @@
 module.exports = {
-	extends: ["./index.js", "@typescript-eslint/recommended"],
+	extends: ["./index.js"],
 	parser: "@typescript-eslint/parser",
-	plugins: ["@typescript-eslint", "import"],
+	plugins: ["@typescript-eslint", "import", "plugin:@typescript-eslint/recommended"],
 	parserOptions: {
 		ecmaVersion: 2022,
 		sourceType: "module",
