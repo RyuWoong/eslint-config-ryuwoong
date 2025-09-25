@@ -77,9 +77,11 @@ module.exports = {
 		"react-native/no-inline-styles": "off", // 인라인 스타일 객체 사용을 비허용 off
 		"react-native/no-color-literals": "off", // 색상 리터럴 사용 허용
 		"react-native/no-raw-text": "off", // 텍스트 컴포넌트 외부에서 원시 텍스트 감지
+		"react-native/no-single-element-style-arrays": "error", // 단일 요소 스타일 배열 사용 금지
 
 		// React Native 환경에 맞는 규칙 조정
 		"no-console": "off", // React Native에서는 console 사용이 일반적
+		"jsx-a11y/no-autofocus": "off", // autofocus 허용
 		"react/jsx-no-undef": [
 			"error",
 			{
