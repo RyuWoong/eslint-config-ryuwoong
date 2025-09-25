@@ -143,29 +143,6 @@ module.exports = {
 };
 ```
 
-## 배포
-
-이 패키지를 npm에 배포하려면:
-
-```bash
-# npm 계정 로그인
-npm login
-
-# 배포 (패치 버전 증가)
-npm run release
-
-# 또는 직접 배포
-npm version patch
-npm publish
-```
-
-### 배포 전 체크사항
-
-- [ ] 모든 테스트 통과
-- [ ] README 문서 업데이트
-- [ ] 버전 번호 적절히 증가
-- [ ] 변경사항 커밋 및 푸시
-
 ## 기여
 
 이슈나 풀 리퀘스트를 환영합니다! 😊
