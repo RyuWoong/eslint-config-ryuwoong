@@ -1,5 +1,6 @@
+const js = require("@eslint/js");
+
 module.exports = {
-	extends: ["eslint:recommended"],
 	parserOptions: {
 		ecmaVersion: 2022,
 		sourceType: "module",
@@ -13,6 +14,8 @@ module.exports = {
 		es2022: true,
 	},
 	rules: {
+		...js.configs.recommended.rules,
+
 		// 코드 품질 규칙들
 		"no-console": "warn",
 		"no-debugger": "warn",

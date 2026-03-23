@@ -86,6 +86,27 @@ module.exports = {
 };
 ```
 
+### ESLint 9 + Flat Config 프로젝트
+
+이 패키지는 여전히 eslintrc 스타일 preset을 제공합니다. `eslint.config.js` 또는 `eslint.config.mjs`에서 사용할 때는 `FlatCompat`로 불러오면 됩니다.
+
+```js
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+import { FlatCompat } from "@eslint/eslintrc";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+	baseDirectory: __dirname,
+});
+
+export default [...compat.extends("ryuwoong/react", "ryuwoong/typescript")];
+```
+
+기본 preset은 `@eslint/js`의 recommended rules를 직접 포함하도록 구성되어 있어, ESLint 9 환경에서 `eslint:recommended` 변환 과정 때문에 `Missing parameter 'recommendedConfig'` 오류가 나는 문제를 피할 수 있습니다.
+
 ## 포함된 규칙들
 
 ### 기본 규칙 (`ryuwoong`)

@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-ryuwoong",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"description": "Personalized ESLint configuration presets for JavaScript, TypeScript, React, and React Native projects",
 	"license": "ISC",
 	"author": {
@@ -22,6 +22,9 @@
 	},
 	"peerDependencies": {
 		"eslint": ">=8.0.0"
+	},
+	"dependencies": {
+		"@eslint/js": "^8.57.0"
 	},
 	"devDependencies": {
 		"eslint": "^8.57.0"
