@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-ryuwoong",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"description": "Personalized ESLint configuration presets for JavaScript, TypeScript, React, and React Native projects",
 	"license": "ISC",
 	"author": {
@@ -9,6 +9,15 @@
 	},
 	"type": "commonjs",
 	"main": "index.js",
+	"exports": {
+		".": "./index.js",
+		"./react": "./react.js",
+		"./typescript": "./typescript.js",
+		"./react-native": "./react-native.js",
+		"./react-native-typescript": "./react-native-typescript.js",
+		"./expo": "./expo.js",
+		"./package.json": "./package.json"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/RyuWoong/eslint-config-ryuwoong.git"
@@ -18,29 +27,50 @@
 		"url": "https://github.com/RyuWoong/eslint-config-ryuwoong/issues"
 	},
 	"engines": {
-		"node": ">=14.0.0"
+		"node": ">=20.9.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=8.0.0"
+		"eslint": "^9.39.0",
+		"typescript": ">=4.8.4 <6.1.0"
+	},
+	"peerDependenciesMeta": {
+		"typescript": {
+			"optional": true
+		}
 	},
 	"dependencies": {
-		"@eslint/js": "^8.57.0"
+		"@eslint/js": "^9.39.0",
+		"eslint-import-resolver-typescript": "^4.4.4",
+		"eslint-plugin-import": "^2.32.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.1.1",
+		"eslint-plugin-react-native": "^5.0.0",
+		"globals": "^16.4.0",
+		"typescript-eslint": "^8.65.0"
 	},
 	"devDependencies": {
-		"eslint": "^8.57.0"
+		"eslint": "^9.39.0",
+		"eslint-config-expo": "~57.0.0",
+		"react": "^19.2.3",
+		"typescript": "^6.0.3"
 	},
 	"files": [
+		"configs/",
 		"index.js",
 		"react.js",
 		"typescript.js",
 		"react-native.js",
+		"react-native-typescript.js",
+		"expo.js",
 		"README.md"
 	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "node --test",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix",
-		"prepublishOnly": "npm run lint",
+		"check": "npm run lint && npm test && npm pack --dry-run",
+		"prepublishOnly": "npm run check",
 		"release": "npm version patch && npm publish",
 		"release:minor": "npm version minor && npm publish",
 		"release:major": "npm version major && npm publish"
